@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Tarea1ProgSistemasComp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Variable que me ingresa el usuario
+            string entrada, posicion =  "";
+            int w, x, y = 0;
+
+
+            Console.WriteLine("Ingrese su nombre y presione la tecla Enter...");
+            entrada = Console.ReadLine();
+
+            //Primer método de la clase string
+            Console.WriteLine("Hola {0}", entrada + ", la longitud del nombre que ingresó es de: " + entrada.Length);
+
+            //Segundo método de la clase string
+            Console.WriteLine("Ingrese la letra de su nombre que desea saber su posición...");
+            posicion = Console.ReadLine();
+            Console.WriteLine("La posición de la letra "+ posicion +" es: "+ Convert.ToInt16(entrada.IndexOf(posicion)+1));
+
+            //Tercer método de la clase string
+            Console.WriteLine("Su nombre todo en mayúsculas es el siguiente: " + entrada.ToUpper());
+            Console.WriteLine("Su nombre todo en minúsculas es el siguiente: " + entrada.ToLower());
+
+            //-------------------------------------------------------------------------------------------------------------
+
+            //Primer método de la clase math
+            Console.WriteLine("Ingrese el número que desea saber su Valor Absoluto...");
+            w = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("El valor absoluto de " + w + ", es: {0}", Math.Abs(w));
+
+            //Segundo método de la clase math
+            Console.WriteLine("Ingrese el primer número...");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ingrese el segundo número...");
+            y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("El mayor entre los números " + x + " y " + y + " es: " + Math.Max(x, y));
+
+            Console.ReadKey();
+
+        }
+    }
+}
